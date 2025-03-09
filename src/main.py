@@ -19,7 +19,7 @@ def main():
     # Si se pasa el parámetro "--hidden", no mostramos la ventana (o la ocultamos)
     auto_hidden = "--hidden" in sys.argv
     if auto_hidden:
-        window.hide()  # Inicia minimizada (en la bandeja)
+        window.hide()  # Inicia minimizada en la bandeja
         time.sleep(5)
     else:
         window.show()
@@ -36,8 +36,11 @@ def main():
 
     def battery_updater():
         while True:
-            percentage = battery_manager.get_battery_percentage()
-            window.comm.update_battery.emit(percentage)
+            try:
+                percentage = battery_manager.get_battery_percentage()
+                window.comm.update_battery.emit(percentage)
+            except Exception as e:
+                print("Error al capturar batería:", e)
             time.sleep(60)
 
     battery_thread = threading.Thread(target=battery_updater, daemon=True)

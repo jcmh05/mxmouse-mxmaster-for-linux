@@ -10,6 +10,7 @@ MXMouse is a Python-based application designed to emulate the functionality of t
 - [Installation](#installation)
 - [How It Works](#how-it-works)
 - [Compiling](#compiling)
+- [License](#license)
 
 ## Introduction
 
@@ -19,13 +20,15 @@ MXMouse aims to provide a seamless experience for Logitech MX Master 3 and 3S mo
 - **Configure Gestures:** Set up gestures for enhanced productivity and navigation.
 - **Adjust Scroll Settings:** Modify scroll sensitivity and invert scroll directions to suit your preferences.
 
+Whether you're a developer, designer, or everyday user, MXMouse offers the flexibility to tailor your mouse functionality to your specific needs.
+
 ## Installation
 
 ### 1. Install via .deb Package
 
-Download the latest MXMouse Debian package from:
+Download the latest MXMouse Debian package from the **dist** folder below:
 
-- [mxmouse.deb](https://github.com/jcmh05/mxmouse-mxmaster-for-linux/raw/main/dist/mxmouse.deb)
+- [mxmouse.deb](dist/mxmouse.deb)
 
 Once downloaded, open a terminal in the folder where the package is located and run:
 
@@ -36,7 +39,7 @@ sudo apt install ./mxmouse.deb
 ### 2. Use the Standalone Executable
 
 If you prefer, you can also use the standalone executable:
-- [mxmouse](https://github.com/jcmh05/mxmouse-mxmaster-for-linux/raw/main/dist/mxmouse)
+- [mxmouse](dist/mxmouse)
 Run it from a terminal:
 ```bash
 ./mxmouse
@@ -175,7 +178,7 @@ The UI consists of:
 - **A gesture section** for configuring directional gestures when holding a specific button.
 - **Scroll and sensitivity controls** for fine-tuning the mouse experience.
 
-## Compiling
+### 5. Compiling
 
 To create a standalone executable, you can use PyInstaller:
 
